@@ -57,7 +57,7 @@ export default function Returned() {
                     <td>{order.phone}</td>
                     <td className="space-y-4">
                       {order?.line_items?.map((l, indx) => (
-                        <div>
+                        <div key={indx}>
                           <span className="px-3  rounded bg-violet-300 mr-2">
                             {l.quantity}
                           </span>

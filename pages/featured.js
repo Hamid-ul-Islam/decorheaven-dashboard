@@ -2,7 +2,7 @@ import Layout from "@/components/Layout";
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 
-const featured = () => {
+const Featured = () => {
   const [products, setProducts] = useState([]);
   useEffect(() => {
     axios.get("/api/products").then((response) => {
@@ -23,7 +23,7 @@ const featured = () => {
         >
           <option disabled selected value={null}>Select Featured Product</option>
           {products?.map((product) => (
-            <option value={product._id}>{product.title}</option>
+            <option key={product._id} value={product._id}>{product.title}</option>
           ))}
         </select>
       </div>
@@ -31,4 +31,4 @@ const featured = () => {
   );
 };
 
-export default featured;
+export default Featured;
