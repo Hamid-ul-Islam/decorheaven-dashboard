@@ -27,6 +27,7 @@ export default async function handle(req, res) {
       properties,
       featured: true,
     });
+    console.log(productDoc)
     res.json(productDoc);
   }
 

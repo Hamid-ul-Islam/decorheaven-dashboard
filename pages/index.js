@@ -3,8 +3,8 @@ import {useSession} from "next-auth/react";
 
 export default function Home() {
   const {data: session} = useSession();
-  return <Layout>
-    <div className="text-blue-900 flex justify-between">
+  return <Layout> 
+    <div className="text-blue-900 flex justify-between ">
       <h2>
         Hello, <b>{session?.user?.name}</b>
       </h2>
@@ -15,5 +15,10 @@ export default function Home() {
         </span>
       </div>
     </div>
+
+  {/* !design Dashboard here */}
+    <section className="flex justify-center items-center h-full">
+      <h1>Dashboard Design Will be here</h1>
+    </section>
   </Layout>
 }
